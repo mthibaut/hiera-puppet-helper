@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["mthibaut@cisco.com"]
   gem.description   = %q{Hiera fixtures for rspec-puppet tests.}
   gem.summary       = %q{Hiera fixtures for rspec-puppet tests.}
-  gem.homepage      = "https://github.com/mthibaut/rspec-hiera-puppet"
+  gem.homepage      = "https://github.com/mthibaut/hiera-puppet-helper"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
