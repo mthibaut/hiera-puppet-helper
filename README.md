@@ -104,7 +104,7 @@ look up data. The following example combine both the 'rspec' backend, and the
       it { should contain_notify("foo").with_message("bar") }
     end
 
-To avoid having to copy-paste the Hier configuration into each and every spec,
+To avoid having to copy-paste the Hiera configuration into each and every spec,
 you can use a shared context. The following is a full-featured example that
 demonstrates the use of a shared context.
 
