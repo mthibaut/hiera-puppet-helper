@@ -21,5 +21,8 @@ RSpec.configure do |c|
     #Puppet::Util::Log.newdestination(:console)
   end
 
+  puts "Use of this module is obsoleted by December 2013 changes to rspec-puppet."
+  puts "For guidance please see: "
+  puts "http://ask.puppetlabs.com/question/60/what-is-the-recommended-method-for-testing-modules-that-use-hiera/?answer=17865#post-id-17865 "
 end
 
