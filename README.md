@@ -4,6 +4,14 @@
 
 Hiera fixtures for puppet-rspec tests.
 
+## Use of this gem deprecated 
+
+The merging into the rspec-puppet project of [PR#125](https://github.com/rodjek/rspec-puppet/pull/125) 
+and [PR#134](https://github.com/rodjek/rspec-puppet/pull/134) in December 2013 replaces the need for 
+this package to support testing of hiera data in rspec-puppet tests.  
+
+[For documentation on its use, try this](http://ask.puppetlabs.com/question/60/what-is-the-recommended-method-for-testing-modules-that-use-hiera/?answer=17865#post-id-17865).
+
 ## Installation
 
 Add this line to your application's Gemfile:
