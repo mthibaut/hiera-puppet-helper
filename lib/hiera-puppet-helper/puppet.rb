@@ -48,7 +48,7 @@ class Puppet::Parser::Compiler
 
       answer = hiera.lookup(key, default, hiera_scope, override, :priority)
 
-      raise(Puppet::ParseError, "Could not find data item #{key} in any Hiera data file and no default supplied") if answer.nil?
+      raise(Puppet::ParseError, "Could not find data item #{key} in any Hiera data file and no default supplied") if answer.nil? and answer != default
 
       return answer
     end
@@ -77,7 +77,7 @@ class Puppet::Parser::Compiler
 
       answer = hiera.lookup(key, default, hiera_scope, override, :array)
 
-      raise(Puppet::ParseError, "Could not find data item #{key} in any Hiera data file and no default supplied") if answer.nil?
+      raise(Puppet::ParseError, "Could not find data item #{key} in any Hiera data file and no default supplied") if answer.nil? and answer != default
 
       answer
     end
@@ -108,7 +108,7 @@ class Puppet::Parser::Compiler
 
       answer = hiera.lookup(key, default, hiera_scope, override, :hash)
 
-      raise(Puppet::ParseError, "Could not find data item #{key} in any Hiera data file and no default supplied") if answer.nil?
+      raise(Puppet::ParseError, "Could not find data item #{key} in any Hiera data file and no default supplied") if answer.nil? and answer != default
 
       answer
     end
@@ -137,7 +137,7 @@ class Puppet::Parser::Compiler
 
       answer = hiera.lookup(key, default, hiera_scope, override, :array)
 
-      raise(Puppet::ParseError, "Could not find data item #{key} in any Hiera data file and no default supplied") if answer.nil?
+      raise(Puppet::ParseError, "Could not find data item #{key} in any Hiera data file and no default supplied") if answer.nil? and answer != default
 
       method = Puppet::Parser::Functions.function(:include)
       send(method, answer)
